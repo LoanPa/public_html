@@ -4,7 +4,7 @@
         <meta charset="UTF-8"/>
         <title>MUSIC.fm</title>
         <meta name="viewport" content="width=device-width; initial-scale=1.0"/>
-        <link rel="stylesheet" type="text/css" href="css/categories.css"/>
+        <link rel="stylesheet" type="text/css" href="css/album.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <script type="text/javascript" src="js/funcions.js"></script>
     </head>
@@ -12,7 +12,7 @@
     <body>
         <header id="Intro">
 
-            <div id="Account" style="grid-area: account" onclick="LogIn2(1)">
+            <div id="Account" style="grid-area: account"  onclick="LogIn2(1)">
                 <a href="#Account">
                     <span class="material-icons">account_circle</span>
                 </a>
@@ -62,9 +62,9 @@
                     </div>
                 </form>
             </div>
-            
-            <div id="IntroCategoria" style="grid-area: categoria">
-                <h1 id="cat">CAT</h1>
+
+            <div id="IntroName" style="grid-area: name">
+                <h1>MUSIC.fm</h1>
             </div>
 
             <div id="ShoppingBag" style="grid-area: shoppingBag">
@@ -72,26 +72,45 @@
                     <span class="material-icons">shopping_cart</span>
                 </a>
             </div>
-
         </header>
 
         <section id="Cuerpo">
-            <nav id="Categorias">
+            <div id="Caratula">
+                <?php //TODO: agafar path i alt BD ?>
+                <img src="media/The_Four_Seasons.jpg" alt="The Four Seasons carátula">
+            </div>
 
-                <?php require __DIR__.'/controladors/llistaCategories.php'; ?>
+            <div id="Titulo">
+                <?php //TODO: agafar nom BD ?>
+                <h4>The Four Seasons</h4>
+            </div>
+            <div id="Info">
+                <?php //TODO: agafar descripcio BD ?>
+                <p>Las cuatro estaciones (en italiano: Le quattro stagioni) es un grupo de cuatro conciertos para violín y orquesta (cada uno está dedicado a una estación: La primavera, El verano, El otoño y El invierno) del compositor italiano Antonio Vivaldi.</p>
+                <p>Compuestos alrededor del año 1721, fueron publicados por el editor Michel-Charles Le Cène en 1725 en Ámsterdam, junto con otros ocho conciertos para violín, como Il cimento dell'armonia e dell'inventione («Concurso entre Armonía e Invención»), Op. 8. El propio Vivaldi afirmó, en la dedicatoria al conde Morzin, que habían sido compuestas con anterioridad: los diversos manuscritos encontrados presentan algunas diferencias que confirman lo declarado por el autor.</p>
+            </div>
 
-            </nav>
+            <section id="Cesta">
+                <div id="Opciones">
+                <?php //TODO: agafar preus BD ?>
+                    <div style="grid-area: Vinilo">
+                        <p style="grid-column: 1/2; grid-row: 1/2">Vinilo</p>
+                        <p style="grid-column: 2/3; grid-row: 1/2">20€</p>
+                    </div>
+                    <div style="grid-area: CD">
+                        <p style="grid-column: 1/2; grid-row: 2/3">CD</p>
+                        <p style="grid-column: 2/3; grid-row: 2/3">14€</p>
+                    </div>
+                    <div style="grid-area: mp3">
+                        <p style="grid-column: 1/2; grid-row: 3/4">mp3</p>
+                        <p style="grid-column: 2/3; grid-row: 3/4">3€</p>
+                    </div>
+                </div>
 
-            <nav id="Albumes">
-
-                <?php require __DIR__.'/controladors/llistaAlbums.php'; ?>
-                
-            </nav>
+                <div id="Comprar">
+                    <p>Comprar</p>
+                </div>
+            </section>
         </section>
-
-        <footer>
-
-        </footer>
     </body>
-
 </html>

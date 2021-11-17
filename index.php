@@ -10,7 +10,6 @@ error_reporting(E_ALL);
     /*
         $accio = $_GET['accio'];
         
-
         switch ($accio)
         {
             case 'llistar-categories':
@@ -20,10 +19,6 @@ error_reporting(E_ALL);
                 include __DIR__.'/recurs_portada.php';
                 break;
         }
-
     */
     
     ?>
-
-   
-

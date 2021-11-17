@@ -4,7 +4,7 @@
         <meta charset="UTF-8"/>
         <title>MUSIC.fm</title>
         <meta name="viewport" content="width=device-width; initial-scale=1.0"/>
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/portada.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <script type="text/javascript" src="js/funcions.js"></script>
     </head>
@@ -45,13 +45,13 @@
                     </div>
                 </form>
             </div>
-
+    
         </header>
 
         <section id="Cuerpo">
             <nav id="Categorias">
                  
-            <?php require __DIR__.'/controladors/llistaCategories.php'; ?>
+                <?php require __DIR__.'/controladors/llistaCategories.php'; ?>
                 
             </nav>
 
