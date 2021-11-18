@@ -64,6 +64,9 @@
             </div>
             
             <div id="IntroCategoria" style="grid-area: categoria">
+            
+                <?php // Canviar Cat per la categoria corresponent?>
+
                 <h1 id="cat">CAT</h1>
             </div>
 
