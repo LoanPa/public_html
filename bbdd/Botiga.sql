@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 20, 2021 at 06:47 PM
+-- Generation Time: Nov 20, 2021 at 08:50 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -35,7 +35,7 @@ CREATE TABLE `Album` (
   `preu_mp3` decimal(6,2) NOT NULL,
   `foto` varchar(50) NOT NULL,
   `alt_foto` varchar(50) NOT NULL,
-  `descripció` varchar(500) NOT NULL,
+  `descripcio` varchar(1000) NOT NULL,
   `estil_id` int(1) NOT NULL,
   `artista` varchar(50) NOT NULL,
   `segell` varchar(50) NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE `Album` (
 -- Dumping data for table `Album`
 --
 
-INSERT INTO `Album` (`id`, `nom`, `preu_cd`, `preu_vinil`, `preu_mp3`, `foto`, `alt_foto`, `descripció`, `estil_id`, `artista`, `segell`, `data_publicacio`) VALUES
+INSERT INTO `Album` (`id`, `nom`, `preu_cd`, `preu_vinil`, `preu_mp3`, `foto`, `alt_foto`, `descripcio`, `estil_id`, `artista`, `segell`, `data_publicacio`) VALUES
 (1, '569', '14.00', '20.00', '4.00', './media/569.jpg', 'portada 569', 'Un album que mola molt', 1, 'GO!GO!7188', 'BMG', '2007-10-24'),
 (2, 'After hours', '14.00', '20.00', '4.00', './media/After_hours.jpg', 'portada After hours', 'Un album que mola molt', 2, 'The Weekend', 'XO, Republic Records', '2020-03-20'),
 (3, 'Bad Habits', '14.00', '20.00', '4.00', './media/Bon_Jovi.jpg', 'portada Bon Jovi', 'Un album que mola molt', 2, 'Ed Sheeran', 'Asylum Records UK', '2021-06-25'),
@@ -57,7 +57,7 @@ INSERT INTO `Album` (`id`, `nom`, `preu_cd`, `preu_vinil`, `preu_mp3`, `foto`, `
 (8, 'Shivers', '14.00', '20.00', '4.00', './media/Shivers.png', 'portada shivers', 'Un album que mola molt', 2, '', '', '1970-01-01'),
 (9, 'Voy a pasarmelo bien', '14.00', '20.00', '4.00', './media/Voy_a_pasarmelo_bien.jpg', 'portada Voy a pasarmelo bien', 'Un album que mola molt', 2, '', '', '1970-01-01'),
 (10, 'The arrival of the birds', '14.00', '20.00', '4.00', './media/The_Arrival_of_the_Birds.jpg', 'portada The arrival of the birds', 'Un album que mola molt', 4, '', '', '1970-01-01'),
-(11, 'The four seasons', '14.00', '20.00', '4.00', './media/The_Four_Seasons.jpg', 'portada The four seasons', 'Un album que mola molt', 4, '', '', '1970-01-01'),
+(11, 'The four seasons', '14.00', '20.00', '4.00', './media/The_Four_Seasons.jpg', 'portada The four seasons', 'Las cuatro estaciones (en italiano: Le quattro stagioni) es un grupo de cuatro conciertos para violín y orquesta (cada uno está dedicado a una estación: La primavera, El verano, El otoño y El invierno) del compositor italiano Antonio Vivaldi.\r\n<br /><br /><br />\r\nCompuestos alrededor del año 1721, fueron publicados por el editor Michel-Charles Le Cène en 1725 en Ámsterdam, junto con otros ocho conciertos para violín, como Il cimento dell\'armonia e dell\'inventione («Concurso entre Armonía e Invención»), Op. 8. El propio Vivaldi afirmó, en la dedicatoria al conde Morzin, que habían sido compuestas con anterioridad: los diversos manuscritos encontrados presentan algunas diferencias que confirman lo declarado por el autor.', 4, 'Antonio Vivaldi', '', '1970-01-01'),
 (12, 'The razor\'s edge', '14.00', '20.00', '4.00', './media/The_Razors_Edge.jpg', 'portada The razor\'s edge', 'Un album que mola molt', 2, '', '', '1970-01-01'),
 (13, 'Rage against the machine', '14.00', '20.00', '4.00', './media/Rage_against_the_machine.jpg', 'portada Rage against the machine', 'Un album que mola molt', 1, '', '', '1992-11-03'),
 (14, 'The battle of Los Angeles', '14.00', '20.00', '4.00', './media/The_battle_of_los_angeles.jpg', 'portada The battle of Los Angeles', 'Un album que mola molt', 1, '', '', '1999-11-02');
@@ -191,12 +191,6 @@ ALTER TABLE `Usuaris`
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `Album`
---
-ALTER TABLE `Album`
-  ADD CONSTRAINT `estil` FOREIGN KEY (`estil_id`) REFERENCES `Estil` (`id`);
 
 --
 -- Constraints for table `Comandes`
