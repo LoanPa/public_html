@@ -1,5 +1,5 @@
 <?php
-
+    // Encriptar contrasenya
     $contrasenya = password_hash($_POST['Contraseña'], PASSWORD_DEFAULT);
 
     $conn = ConnectaBD();
@@ -16,6 +16,4 @@
 
     $stmt->execute();
     $conn = null;
-    
-
 ?>
