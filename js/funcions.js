@@ -64,3 +64,32 @@ function LogIn2(type)
         regHTML.style.display = "block";
     }
 }
+
+
+// Loan
+// Detall de producte amb AJAX
+function DetallProducte(id)
+{
+    $("a").hide();
+}
+
+
+function Registre()
+{
+
+    $(document).ready(function()
+    {
+        $("#graus").change(function()
+        {
+            $.ajax(
+                {url: "mencions.php?grau=" + $("#graus").val(), success:
+                    function(result)
+                    {        
+                        $("#mencions").html(result);
+                    }
+                }
+            );
+        });
+    });
+
+}

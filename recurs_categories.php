@@ -3,16 +3,17 @@
     <head lang="es">
         <meta charset="UTF-8"/>
         <title>MUSIC.fm</title>
-        <meta name="viewport" content="width=device-width; initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="css/categories.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/funcions.js"></script>
     </head>
 
     <body>
         <header id="Intro">
 
-            <div id="Account" style="grid-area: account" onclick="LogIn2(1)">
+        <div id="Account" style="grid-area: account" onclick="LogIn2(1)">
                 <a href="#Account">
                     <span class="material-icons">account_circle</span>
                 </a>
@@ -36,7 +37,7 @@
             </div>
 
             <div class="LoginContainer" id="Reg">
-                <form action="" method="post">
+                <form action="controladors/registre.php" method="post">
                     <div id="Nom">
                         <label for="nom">Nom</label><br>
                         <input type="text" id="nom" name="Nom" placeholder="Nom..."><br>
@@ -67,7 +68,7 @@
             
                 <?php // Canviar Cat per la categoria corresponent?>
 
-                <h1 id="cat">CAT</h1>
+                <h1 id="cat"><?php echo $_GET['nom'] ?></h1>
             </div>
 
             <div id="ShoppingBag" style="grid-area: shoppingBag">
@@ -87,7 +88,7 @@
 
             <nav id="Albumes">
 
-                <?php require __DIR__.'/controladors/llistaAlbums.php'; ?>
+                <?php require __DIR__.'/controladors/llistaAlbumsCategoria.php'; ?>
                 
             </nav>
         </section>

@@ -3,9 +3,10 @@
     <head lang="es">
         <meta charset="UTF-8"/>
         <title>MUSIC.fm</title>
-        <meta name="viewport" content="width=device-width; initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="css/portada.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/funcions.js"></script>
     </head>
 
@@ -30,7 +31,7 @@
             </div>
 
             <div id="LoginContainer">
-                <form action="" method="post">
+                <form action="login.php" method="post">
                     <div id="correu">
                         <label for="correu">Dirección de e-mail</label><br>
                         <input type="email" id="correu" name="Correu" placeholder="email@example.com"><br>
