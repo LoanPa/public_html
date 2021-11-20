@@ -70,13 +70,14 @@ function LogIn2(type)
 // Detall de producte amb AJAX
 function DetallProducte(id)
 {
+    //Aixo era nomes per comprovar si funcionava el jQuery (funciona)
     $("a").hide();
 }
 
 
 function Registre()
 {
-
+    //Aixo esta copiat dels apunts
     $(document).ready(function()
     {
         $("#graus").change(function()

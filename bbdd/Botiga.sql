@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 14, 2021 at 09:39 AM
+-- Generation Time: Nov 20, 2021 at 06:47 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -29,41 +29,38 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `Album` (
   `id` int(1) NOT NULL,
-  `nom` varchar(50) COLLATE utf8_general_ci NOT NULL,
+  `nom` varchar(50) NOT NULL,
   `preu_cd` decimal(6,2) NOT NULL,
   `preu_vinil` decimal(6,2) NOT NULL,
   `preu_mp3` decimal(6,2) NOT NULL,
-  `foto` varchar(50) COLLATE utf8_general_ci NOT NULL,
-  `alt_foto` varchar(50) COLLATE utf8_general_ci NOT NULL,
-  `descripció` varchar(500) COLLATE utf8_general_ci NOT NULL,
+  `foto` varchar(50) NOT NULL,
+  `alt_foto` varchar(50) NOT NULL,
+  `descripció` varchar(500) NOT NULL,
   `estil_id` int(1) NOT NULL,
-  `artista` varchar(50) COLLATE utf8_general_ci NOT NULL,
-  `segell` varchar(50) COLLATE utf8_general_ci NOT NULL,
-  `data_publicacio` date NOT NULL,
-  `format` varchar(20) COLLATE utf8_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `artista` varchar(50) NOT NULL,
+  `segell` varchar(50) NOT NULL,
+  `data_publicacio` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `Album`
 --
 
-INSERT INTO `Album` (`id`, `nom`, `preu_cd`,`preu_vinil`,`preu_mp3`, `foto`, `alt_foto`,`descripció`, `estil_id`, `artista`, `segell`, `data_publicacio`, `format`) VALUES
-(1, '569', '14','20','4', './media/569.jpg', 'portada 569', 'Un album que mola molt', 1, 'GO!GO!7188', 'BMG', '2007-10-24', 'CD'),
-(2, 'After hours', '14','20','4', './media/After_hours.jpg', 'portada After hours', 'Un album que mola molt', 2, 'The Weekend', 'XO, Republic Records', '2020-03-20', 'CD'),
-(3, 'Bad Habits', '14','20','4', './media/Bon_Jovi.jpg', 'portada Bon Jovi', 'Un album que mola molt', 2, 'Ed Sheeran', 'Asylum Records UK', '2021-06-25', 'CD'),
-(4, 'Cold Heart', '14','20','4', './media/Cold_Heart.jpg', 'portada Cold Heart', 'Un album que mola molt', 2, '', '', '1970-1-1', ''),
-(5, "Don't shoot me", '14','20','4', './media/Dont_Shoot_Me.jpg', "portada Don't shoot me", 'Un album que mola molt', 2, '', '', '1970-1-1', ''),
-(6, "Higher Power", '14','20','4', './media/Higher_Power.jpg', "portada Higher power", 'Un album que mola molt', 2, '', '', '1970-1-1', ''),
-(7, "Honky Chateau", '14','20','4', './media/Honky_Chateau.jpg', "Honky chateau", 'Un album que mola molt', 2, '', '', '1970-1-1', ''),
-(8, "Shivers", '14','20','4', './media/Shivers.png', "portada shivers", 'Un album que mola molt', 2, '', '', '1970-1-1', ''),
-(9, "Voy a pasarmelo bien", '14','20','4', './media/Voy_a_pasarmelo_bien.jpg', "portada Voy a pasarmelo bien", 'Un album que mola molt', 2, '', '', '1970-1-1', ''),
-(10, "The arrival of the birds", '14','20','4', './media/The_Arrival_of_the_Birds.jpg', "portada The arrival of the birds", 'Un album que mola molt', 2, '', '', '1970-1-1', ''),
-(11, "The four seasons", '14','20','4', './media/The_Four_Seasons.jpg', "portada The four seasons", 'Un album que mola molt', 2, '', '', '1970-1-1', ''),
-(12, "The razor's edge", '14','20','4', './media/The_Razors_Edge.jpg', "portada The razor's edge", 'Un album que mola molt', 2, '', '', '1970-1-1', ''),
-(13, "Rage against the machine", '14','20','4', './media/Rage_against_the_machine.jpg', "portada Rage against the machine", 'Un album que mola molt', 1, '', '', '1992-11-3', ''),
-(14, "The battle of Los Angeles", '14','20','4', './media/The_battle_of_los_angeles.jpg', "portada The battle of Los Angeles", 'Un album que mola molt', 1, '', '', '1999-11-2', '');
-
-
+INSERT INTO `Album` (`id`, `nom`, `preu_cd`, `preu_vinil`, `preu_mp3`, `foto`, `alt_foto`, `descripció`, `estil_id`, `artista`, `segell`, `data_publicacio`) VALUES
+(1, '569', '14.00', '20.00', '4.00', './media/569.jpg', 'portada 569', 'Un album que mola molt', 1, 'GO!GO!7188', 'BMG', '2007-10-24'),
+(2, 'After hours', '14.00', '20.00', '4.00', './media/After_hours.jpg', 'portada After hours', 'Un album que mola molt', 2, 'The Weekend', 'XO, Republic Records', '2020-03-20'),
+(3, 'Bad Habits', '14.00', '20.00', '4.00', './media/Bon_Jovi.jpg', 'portada Bon Jovi', 'Un album que mola molt', 2, 'Ed Sheeran', 'Asylum Records UK', '2021-06-25'),
+(4, 'Cold Heart', '14.00', '20.00', '4.00', './media/Cold_Heart.jpg', 'portada Cold Heart', 'Un album que mola molt', 2, '', '', '1970-01-01'),
+(5, 'Don\'t shoot me', '14.00', '20.00', '4.00', './media/Dont_Shoot_Me.jpg', 'portada Don\'t shoot me', 'Un album que mola molt', 2, '', '', '1970-01-01'),
+(6, 'Higher Power', '14.00', '20.00', '4.00', './media/Higher_Power.jpg', 'portada Higher power', 'Un album que mola molt', 2, '', '', '1970-01-01'),
+(7, 'Honky Chateau', '14.00', '20.00', '4.00', './media/Honky_Chateau.jpg', 'Honky chateau', 'Un album que mola molt', 2, '', '', '1970-01-01'),
+(8, 'Shivers', '14.00', '20.00', '4.00', './media/Shivers.png', 'portada shivers', 'Un album que mola molt', 2, '', '', '1970-01-01'),
+(9, 'Voy a pasarmelo bien', '14.00', '20.00', '4.00', './media/Voy_a_pasarmelo_bien.jpg', 'portada Voy a pasarmelo bien', 'Un album que mola molt', 2, '', '', '1970-01-01'),
+(10, 'The arrival of the birds', '14.00', '20.00', '4.00', './media/The_Arrival_of_the_Birds.jpg', 'portada The arrival of the birds', 'Un album que mola molt', 4, '', '', '1970-01-01'),
+(11, 'The four seasons', '14.00', '20.00', '4.00', './media/The_Four_Seasons.jpg', 'portada The four seasons', 'Un album que mola molt', 4, '', '', '1970-01-01'),
+(12, 'The razor\'s edge', '14.00', '20.00', '4.00', './media/The_Razors_Edge.jpg', 'portada The razor\'s edge', 'Un album que mola molt', 2, '', '', '1970-01-01'),
+(13, 'Rage against the machine', '14.00', '20.00', '4.00', './media/Rage_against_the_machine.jpg', 'portada Rage against the machine', 'Un album que mola molt', 1, '', '', '1992-11-03'),
+(14, 'The battle of Los Angeles', '14.00', '20.00', '4.00', './media/The_battle_of_los_angeles.jpg', 'portada The battle of Los Angeles', 'Un album que mola molt', 1, '', '', '1999-11-02');
 
 -- --------------------------------------------------------
 
@@ -77,7 +74,7 @@ CREATE TABLE `Comandes` (
   `data` datetime(1) NOT NULL,
   `import_total` decimal(5,2) NOT NULL,
   `total_elements` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `Comandes`
@@ -95,8 +92,8 @@ INSERT INTO `Comandes` (`id`, `usr_id`, `data`, `import_total`, `total_elements`
 
 CREATE TABLE `Estil` (
   `id` int(1) NOT NULL,
-  `nom` varchar(50) COLLATE utf8_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `nom` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `Estil`
@@ -119,9 +116,9 @@ CREATE TABLE `Linies_comanda` (
   `comanda_id` int(1) NOT NULL,
   `album_id` int(1) NOT NULL,
   `quantitat` int(1) NOT NULL,
-  `nom` varchar(50) COLLATE utf8_general_ci NOT NULL,
+  `nom` varchar(50) NOT NULL,
   `preu` decimal(4,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `Linies_comanda`
@@ -138,21 +135,20 @@ INSERT INTO `Linies_comanda` (`id`, `comanda_id`, `album_id`, `quantitat`, `nom`
 
 CREATE TABLE `Usuaris` (
   `id` int(1) NOT NULL,
-  `nom` varchar(40) COLLATE utf8_general_ci NOT NULL,
-  `direcció` varchar(50) COLLATE utf8_general_ci NOT NULL,
-  `població` varchar(59) COLLATE utf8_general_ci NOT NULL,
-  `cp` varchar(5) COLLATE utf8_general_ci NOT NULL,
-  `email` varchar(30) COLLATE utf8_general_ci NOT NULL,
-  `passwd` varchar(256) COLLATE utf8_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `nom` varchar(40) NOT NULL,
+  `direcció` varchar(50) NOT NULL,
+  `cp` varchar(5) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `passwd` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `Usuaris`
 --
 
-INSERT INTO `Usuaris` (`id`, `nom`, `direcció`, `població`, `cp`, `email`, `passwd`) VALUES
-(1, 'Jaume', 'Casa seva', 'Santaco', '08924', 'Jaume@ajuntamentdesantaco.cat', 'contrasenya'),
-(2, 'Joan', 'Casa seva', 'Santqgat', '08195', 'Jaume@ajuntamentdesantqgat.cat', 'contrasenya');
+INSERT INTO `Usuaris` (`id`, `nom`, `direcció`, `cp`, `email`, `passwd`) VALUES
+(1, 'Jaume', 'Casa seva', '08924', 'Jaume@ajuntamentdesantaco.cat', 'contrasenya'),
+(2, 'Joan', 'Casa seva', '08195', 'Jaume@ajuntamentdesantqgat.cat', 'contrasenya');
 
 --
 -- Indexes for dumped tables
