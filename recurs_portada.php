@@ -3,10 +3,9 @@
     <head lang="es">
         <meta charset="UTF-8"/>
         <title>MUSIC.fm</title>
-        <meta name="viewport" content="width=device-width initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="css/portada.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/funcions.js"></script>
     </head>
 
@@ -30,8 +29,8 @@
                 <h4>Las mejores canciones en nuestra web</h4>
             </div>
 
-            <div id="LoginContainer">
-                <form action="login.php" method="post">
+            <div class="LoginContainer" id="Log">
+                <form action="" method="post">
                     <div id="correu">
                         <label for="correu">Dirección de e-mail</label><br>
                         <input type="email" id="correu" name="Correu" placeholder="email@example.com"><br>
@@ -42,24 +41,52 @@
                     </div>
                     <div id="Submit">
                         <input type="submit" value="Inicia sesión">
-                        <p onclick="Registre()">Registrarme</p>
+                        <a onclick="LogIn2(2)"><p>Registrarme</p></a>
                     </div>
                 </form>
             </div>
-    
+
+            <div class="LoginContainer" id="Reg">
+                <form action="" method="post">
+                    <div id="Nom">
+                        <label for="nom">Nom</label><br>
+                        <input type="text" id="nom" name="Nom" placeholder="Nom..."><br>
+                    </div>
+                    <di id="correuR">
+                        <label for="correu">Dirección de e-mail</label><br>
+                        <input type="email" id="correu" name="Correu" placeholder="email@example.com"><br>
+                    </di>
+                    <div  id="passwordR">
+                        <label for="contraseña">Contraseña</label><br>
+                        <input type="password" id="contraseña" name="Contraseña" placeholder="Contraseña...">
+                    </div>
+                    <di id="address">
+                        <label for="direccion">Dirección</label><br>
+                        <input type="text" id="dirrrecion" name="Address" placeholder="Dirección..."><br>
+                    </di>
+                    <div id="codiPostal">
+                        <label for="codiPostal">Código Postal</label><br>
+                        <input type="number" id="codiPostal" name="CodigoPostal" placeholder="Código...">
+                    </div>
+                    <div id="Submit">
+                        <input type="submit" value="Registrar">
+                    </div>
+                </form>
+            </div>
+
         </header>
 
         <section id="Cuerpo">
-            <nav id="Categorias">
+        <nav id="Categorias">
                  
-                <?php require __DIR__.'/controladors/llistaCategories.php'; ?>
-                
-            </nav>
+                 <?php require __DIR__.'/controladors/llistaCategories.php'; ?>
+                 
+             </nav>
 
             <nav id="Albumes">
-            
+                
                 <?php require __DIR__.'/controladors/llistaAlbums.php'; ?>
-
+            
             </nav>
         </section>
 
