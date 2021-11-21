@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 21-11-2021 a las 14:02:09
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.12
+-- Host: localhost
+-- Generation Time: Nov 21, 2021 at 02:33 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `Botiga`
+-- Database: `Botiga`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Album`
+-- Table structure for table `Album`
 --
 
 CREATE TABLE `Album` (
@@ -43,7 +43,7 @@ CREATE TABLE `Album` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `Album`
+-- Dumping data for table `Album`
 --
 
 INSERT INTO `Album` (`id`, `nom`, `preu_cd`, `preu_vinil`, `preu_mp3`, `foto`, `alt_foto`, `descripcio`, `estil_id`, `artista`, `segell`, `data_publicacio`) VALUES
@@ -60,12 +60,13 @@ INSERT INTO `Album` (`id`, `nom`, `preu_cd`, `preu_vinil`, `preu_mp3`, `foto`, `
 (11, 'The four seasons', '14.00', '20.00', '4.00', './media/The_Four_Seasons.jpg', 'portada The four seasons', 'Las cuatro estaciones (en italiano: Le quattro stagioni) es un grupo de cuatro conciertos para violín y orquesta (cada uno está dedicado a una estación: La primavera, El verano, El otoño y El invierno) del compositor italiano Antonio Vivaldi.\r\n<br /><br /><br />\r\nCompuestos alrededor del año 1721, fueron publicados por el editor Michel-Charles Le Cène en 1725 en Ámsterdam, junto con otros ocho conciertos para violín, como Il cimento dell\'armonia e dell\'inventione («Concurso entre Armonía e Invención»), Op. 8. El propio Vivaldi afirmó, en la dedicatoria al conde Morzin, que habían sido compuestas con anterioridad: los diversos manuscritos encontrados presentan algunas diferencias que confirman lo declarado por el autor.', 4, 'Antonio Vivaldi', 'Independent', '1723-01-01'),
 (12, 'The razor\'s edge', '14.00', '20.00', '4.00', './media/The_Razors_Edge.jpg', 'portada The razor\'s edge', 'The Razors Edge —en español: El filo de las navajas— es el duodécimo álbum de estudio de la banda de Hard Rock AC/DC editado en septiembre de 1990. Con la producción de Bruce Fairbairn y la nueva incorporación del baterista Chris Slade, significó el regreso del conjunto a los primeros puestos de las listas de ventas.', 2, 'AC/DC', 'Atco Records', '1990-09-21'),
 (13, 'Rage against the machine', '14.00', '20.00', '4.00', './media/Rage_against_the_machine.jpg', 'portada Rage against the machine', 'Un album que mola molt', 1, '', '', '1992-11-03'),
-(14, 'The battle of Los Angeles', '14.00', '20.00', '4.00', './media/The_battle_of_los_angeles.jpg', 'portada The battle of Los Angeles', 'The Battle of Los Angeles es el tercer álbum de estudio de la banda estadounidense de rap metal Rage Against the Machine. Fue lanzado el 2 de noviembre de 1999, un día antes del séptimo aniversario del lanzamiento de álbum debut, y exactamente tres años después de Evil Empire.', 1, 'Rage Against The Machine', 'Epic Records', '1999-11-02');
+(14, 'The battle of Los Angeles', '14.00', '20.00', '4.00', './media/The_battle_of_los_angeles.jpg', 'portada The battle of Los Angeles', 'The Battle of Los Angeles es el tercer álbum de estudio de la banda estadounidense de rap metal Rage Against the Machine. Fue lanzado el 2 de noviembre de 1999, un día antes del séptimo aniversario del lanzamiento de álbum debut, y exactamente tres años después de Evil Empire.', 1, 'Rage Against The Machine', 'Epic Records', '1999-11-02'),
+(15, 'Giant steps', '14.00', '20.00', '3.00', './media/giant_steps.jpeg', 'Portada Giant steps', 'Giant Steps es el quinto álbum de estudio de John Coltrane como líder. El álbum, su primera grabación para Atlantic Records, fue grabado entre mayo y diciembre de 1959, coincidiendo con las fechas en las cuales Coltrane participaba en el clásico Kind of Blue de Miles Davis. Precisamente estuvo acompañado de otros tres músicos que aparecen en ambas grabaciones, los miembros del Quinteto de Miles Davis Paul Chambers, Wynton Kelly y Jimmy Cobb.2​\r\n< /br>\r\nEn el 2003, en una edición especial, la revista Rolling Stone posicionó el álbum en el puesto 102 de su lista de los 500 mejores álbumes de todos los tiempos.', 3, 'John Coltrane', 'Atlantic', '1960-07-21');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Comandes`
+-- Table structure for table `Comandes`
 --
 
 CREATE TABLE `Comandes` (
@@ -77,7 +78,7 @@ CREATE TABLE `Comandes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `Comandes`
+-- Dumping data for table `Comandes`
 --
 
 INSERT INTO `Comandes` (`id`, `usr_id`, `data`, `import_total`, `total_elements`) VALUES
@@ -87,7 +88,7 @@ INSERT INTO `Comandes` (`id`, `usr_id`, `data`, `import_total`, `total_elements`
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Estil`
+-- Table structure for table `Estil`
 --
 
 CREATE TABLE `Estil` (
@@ -96,7 +97,7 @@ CREATE TABLE `Estil` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `Estil`
+-- Dumping data for table `Estil`
 --
 
 INSERT INTO `Estil` (`id`, `nom`) VALUES
@@ -108,7 +109,7 @@ INSERT INTO `Estil` (`id`, `nom`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Linies_comanda`
+-- Table structure for table `Linies_comanda`
 --
 
 CREATE TABLE `Linies_comanda` (
@@ -121,7 +122,7 @@ CREATE TABLE `Linies_comanda` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `Linies_comanda`
+-- Dumping data for table `Linies_comanda`
 --
 
 INSERT INTO `Linies_comanda` (`id`, `comanda_id`, `album_id`, `quantitat`, `nom`, `preu`) VALUES
@@ -130,7 +131,7 @@ INSERT INTO `Linies_comanda` (`id`, `comanda_id`, `album_id`, `quantitat`, `nom`
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Usuaris`
+-- Table structure for table `Usuaris`
 --
 
 CREATE TABLE `Usuaris` (
@@ -143,7 +144,7 @@ CREATE TABLE `Usuaris` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `Usuaris`
+-- Dumping data for table `Usuaris`
 --
 
 INSERT INTO `Usuaris` (`id`, `nom`, `direcció`, `cp`, `email`, `passwd`) VALUES
@@ -152,31 +153,31 @@ INSERT INTO `Usuaris` (`id`, `nom`, `direcció`, `cp`, `email`, `passwd`) VALUES
 (3, 'Xavier', 'C/ Eduard Maristany', '08912', 'xavierperezbdn@gmail.com', '$2y$10$FnvEbiCg0F762f295WUMJeLU0Boh//3DbxQ920yD9FM9xaw5bvcJa');
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `Album`
+-- Indexes for table `Album`
 --
 ALTER TABLE `Album`
   ADD PRIMARY KEY (`id`),
   ADD KEY `estil` (`estil_id`);
 
 --
--- Indices de la tabla `Comandes`
+-- Indexes for table `Comandes`
 --
 ALTER TABLE `Comandes`
   ADD PRIMARY KEY (`id`),
   ADD KEY `usuari` (`usr_id`) USING BTREE;
 
 --
--- Indices de la tabla `Estil`
+-- Indexes for table `Estil`
 --
 ALTER TABLE `Estil`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `Linies_comanda`
+-- Indexes for table `Linies_comanda`
 --
 ALTER TABLE `Linies_comanda`
   ADD PRIMARY KEY (`id`),
@@ -184,29 +185,29 @@ ALTER TABLE `Linies_comanda`
   ADD KEY `album_id` (`album_id`);
 
 --
--- Indices de la tabla `Usuaris`
+-- Indexes for table `Usuaris`
 --
 ALTER TABLE `Usuaris`
   ADD PRIMARY KEY (`id`);
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `Album`
+-- Constraints for table `Album`
 --
 ALTER TABLE `Album`
   ADD CONSTRAINT `estil_id` FOREIGN KEY (`estil_id`) REFERENCES `Estil` (`id`);
 
 --
--- Filtros para la tabla `Comandes`
+-- Constraints for table `Comandes`
 --
 ALTER TABLE `Comandes`
   ADD CONSTRAINT `fa` FOREIGN KEY (`usr_id`) REFERENCES `Usuaris` (`id`);
 
 --
--- Filtros para la tabla `Linies_comanda`
+-- Constraints for table `Linies_comanda`
 --
 ALTER TABLE `Linies_comanda`
   ADD CONSTRAINT `Linies_comanda_ibfk_1` FOREIGN KEY (`comanda_id`) REFERENCES `Comandes` (`id`),
