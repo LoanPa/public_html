@@ -68,7 +68,7 @@
             
 <?php // He posat que al clicar el nom de la categoria de dalt torni a l'inici, es practic. Ho pots treure si vols?>
 
-                <a href= 'index.php'> <h1 id="cat"><?php echo $_GET['nom'] ?></h1> </a>
+                <a href= 'index.php'> <h1 id="cat"><?php echo $_GET['nom_categoria'] ?></h1> </a>
             </div>
 
             <div id="ShoppingBag" style="grid-area: shoppingBag">
