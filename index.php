@@ -6,21 +6,21 @@ error_reporting(E_ALL);
 
 
 
-        $accio = $_GET['accio'];
+        $accio = $_GET['accio']?? null;
 
-       
-            switch ($accio)
-            {
-                case 'llistar-categories':
-                    include __DIR__.'/recurs_categories.php';
-                    break;
-                case 'detall-album':
-                    include __DIR__.'/recurs_album.php';
-                    break;
-                default:
-                    include __DIR__.'/recurs_portada.php';
-                    break;
-            }
-    
+
+        switch ($accio)
+        {
+            case 'llistar-categories':
+                include __DIR__.'/recurs_categories.php';
+                break;
+            case 'detall-album':
+                include __DIR__.'/recurs_album.php';
+                break;
+            default:
+                include __DIR__.'/recurs_portada.php';
+                break;
+        }
+        
     
     ?>
