@@ -42,7 +42,6 @@ function LogIn() {
 function LogIn2(type)
 {
     var loginHTML = document.getElementById("Log");
-    var regHTML = document.getElementById("Reg");
     var cuerpoHTML = document.getElementById("Cuerpo");
 
     if (type == 1)
@@ -54,24 +53,52 @@ function LogIn2(type)
         }
         else if (loginHTML.style.display == "block")
         {
-            cuerpoHTML.style.filter = "blur(0)";
-            regHTML.style.display = "none"
             loginHTML.style.display = "none";
+            cuerpoHTML.style.filter = "blur(0)";
         }
     }
     else if (type == 2)
     {
-        regHTML.style.display = "block";
+        let htmlString = `
+            <form action="" method="post">
+                <div id="Nom">
+                    <label for="nom">Nom</label><br>
+                    <input type="text" id="nom" name="Nom" placeholder="Nom..."><br>
+                </div>
+                <di id="correuR">
+                    <label for="correu">Dirección de e-mail</label><br>
+                    <input type="email" id="correu" name="Correu" placeholder="email@example.com"><br>
+                </di>
+                <div  id="passwordR">
+                    <label for="contraseña">Contraseña</label><br>
+                    <input type="password" id="contraseña" name="Contraseña" placeholder="Contraseña...">
+                </div>
+                <di id="address">
+                    <label for="direccion">Dirección</label><br>
+                    <input type="text" id="dirrrecion" name="Address" placeholder="Dirección..."><br>
+                </di>
+                <div id="codiPostal">
+                    <label for="codiPostal">Código Postal</label><br>
+                    <input type="number" id="codiPostal" name="CodigoPostal" placeholder="Código...">
+                </div>
+                <div id="Submit">
+                    <input type="submit" value="Registrar">
+                </div>
+            </form>`;
+
+            loginHTML.innerHTML = htmlString;
     }
 }
-
 
 // Loan
 // Detall de producte amb AJAX
 function DetallProducte(id)
 {
-    //Aixo era nomes per comprovar si funcionava el jQuery (funciona)
-    $("a").hide();
+    $(document).ready(function(){
+        var url = "recurs_album.php?album_id=" + id;
+
+        $("body").load(url);
+    });
 }
 
 
