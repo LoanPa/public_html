@@ -88,7 +88,7 @@
 
             <nav id="Albumes">
 
-                <?php require __DIR__.'/controladors/llistaAlbumsCategoria.php'; ?>
+                <?php //require __DIR__.'/controladors/llistaAlbumsCategoria.php'; ?>
                 
             </nav>
         </section>

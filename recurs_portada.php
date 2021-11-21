@@ -48,7 +48,7 @@
             </div>
 
             <div class="LoginContainer" id="Reg">
-                <form action="" method="post">
+                <form action="controladors/registre.php" method="post">
                     <div id="Nom">
                         <label for="nom">Nom</label><br>
                         <input type="text" id="nom" name="Nom" placeholder="Nom..."><br>
