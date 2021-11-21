@@ -96,7 +96,6 @@ function DetallProducte(id)
 {
     $(document).ready(function(){
         var url = "recurs_album.php?album_id=" + id;
-
         $("body").load(url);
     });
 }
