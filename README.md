@@ -1,6 +1,6 @@
-#Pràctica TDIW
+# Pràctica TDIW #
 ---
-Xavier Pérez Ruiz --> 1566276
+Xavier Pérez Ruiz --> 1566276  
 Loan Panareda Lecomte --> 
 ---
 
