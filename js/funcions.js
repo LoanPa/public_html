@@ -102,29 +102,8 @@ function DetallProducte(id)
 
 function Categoria(id)
 {
-    $(document).ready(function() {
+    //$(document).ready(function() {
         var url = "controladors/llistaAlbumsCategoria.php?id_categoria=" + id;
-        $("#Albumes").load(url)
-    });
-}
-
-
-function Registre()
-{
-    //Aixo esta copiat dels apunts
-    $(document).ready(function()
-    {
-        $("#graus").change(function()
-        {
-            $.ajax(
-                {url: "mencions.php?grau=" + $("#graus").val(), success:
-                    function(result)
-                    {        
-                        $("#mencions").html(result);
-                    }
-                }
-            );
-        });
-    });
-
+        $("#Albumes").load(url);
+    //});
 }
