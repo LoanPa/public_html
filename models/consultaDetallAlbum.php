@@ -13,8 +13,9 @@
     WHERE Album.id = :id;";
     // Preparar consulta
     $stmt = $conn->prepare($sql);
-    // Substituir id pel valor del get
-    $stmt->bindValue('id',$_GET['album_id']);
+
+    // Substituir id pel valor del get, despres d'haver estat validat
+    $stmt->bindValue('id',htmlentities($_GET['album_id'], ENT_QUOTES | ENT_HTML5, 'UTF-8'));
     // Executar consulta
     $stmt->execute();
     $album = $stmt->fetch();

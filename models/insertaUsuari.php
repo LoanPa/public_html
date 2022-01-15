@@ -8,10 +8,10 @@
     $stmt = $conn->prepare($sql);
 
     $stmt->bindValue('id',$newUserID);
-    $stmt->bindValue('nom',$_POST['Nom']);
-    $stmt->bindValue('addres',$_POST['Address']);
-    $stmt->bindValue('codiPostal',$_POST['CodigoPostal']);
-    $stmt->bindValue('email',$_POST['Correu']);
+    $stmt->bindValue('nom',$nom);
+    $stmt->bindValue('addres',$address);
+    $stmt->bindValue('codiPostal',$codi_postal);
+    $stmt->bindValue('email',$email);
     $stmt->bindValue('contrasenya',$contrasenya);
 
     $stmt->execute();

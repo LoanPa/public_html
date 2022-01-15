@@ -1,6 +1,6 @@
 <?php   
     $conn = ConnectaBD();
-    $id_album = $_GET['id_categoria'];
+    $id_album = htmlentities($_GET['id_categoria'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
     $sql="SELECT id, foto, alt_foto FROM Album WHERE estil_id= :id;";
     // Preparar consulta
     $stmt = $conn->prepare($sql);
