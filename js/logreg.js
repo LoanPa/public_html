@@ -33,7 +33,7 @@ let reg = `
     </di>
     <div id="codiPostal">
         <label for="codiPostal">Código Postal</label><br>
-        <input type="number" id="codiPostal" name="CodigoPostal" placeholder="Código..." required>
+        <input type="text" id="codiPostal" name="CodigoPostal" placeholder="Código..." pattern="[0-9]{5}" required>
     </div>
     <div id="Submit">
         <input type="submit" value="Registrar">
