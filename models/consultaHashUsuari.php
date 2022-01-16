@@ -1,11 +1,11 @@
 <?php
     $conn = ConnectaBD();
-    $sql="SELECT passwd FROM Usuaris where passwd = :pass;";
+    $sql="SELECT passwd FROM Usuaris where email = :mail";
     $stmt = $conn->prepare($sql);
     
-    $stmt->bindValue('pass',$password);
+    $stmt->bindValue('mail',$mail);
     
     $stmt->execute();
-    $result = $stmt->fetch();
+    $password = $stmt->fetch();
     $conn = null;
 ?>
