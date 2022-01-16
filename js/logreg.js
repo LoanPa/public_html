@@ -1,5 +1,5 @@
 let log = `
-<form action="" method="post">
+<form action="controladors/iniciaSessio.php" method="post">
     <div id="correu">
         <label for="correu">Dirección de e-mail</label><br>
         <input type="email" id="correu" name="Correu" placeholder="email@example.com" required><br>

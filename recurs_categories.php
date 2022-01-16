@@ -7,10 +7,12 @@
         <link rel="stylesheet" type="text/css" href="css/general.css"/>
         <link rel="stylesheet" type="text/css" href="css/headerPetit.css"/>
         <link rel="stylesheet" type="text/css" href="css/logreg.css"/>
+        <link rel="stylesheet" type="text/css" href="css/shoppingcart.css"/> 
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/logreg.js"></script>
         <script type="text/javascript" src="js/ajax.js"></script>
+        <script type="text/javascript" src="js/shoppingCart.js"></script>
     </head>
 
     <body>
@@ -25,10 +27,15 @@
                     <h1 id="cat"><?php echo htmlentities($_GET['nom_categoria'], ENT_QUOTES | ENT_HTML5, 'UTF-8'); ?></h1> 
                 </a>
             </div>
-            <div id="ShoppingBag">
+            <div id="ShoppingBag" onclick="cart()">
                 <a href="#ShoppingBag">
                     <span class="material-icons">shopping_cart</span>
                 </a>
+                <div id="shoppingCartDropDown" class="dropDown">
+                    <p>Preu <b>30€</b></p>
+                    <hr>
+                    <p>Quantitat <b>3</b></p>
+                </div>
             </div>
         </header>
 
