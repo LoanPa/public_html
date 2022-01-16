@@ -7,5 +7,6 @@
     
     $stmt->execute();
     $password = $stmt->fetch();
+    $password = $password[0];
     $conn = null;
 ?>

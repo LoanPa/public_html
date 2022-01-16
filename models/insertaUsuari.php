@@ -1,6 +1,4 @@
 <?php
-    // Encriptar contrasenya
-    $contrasenya = password_hash($_POST['Contraseña'], PASSWORD_DEFAULT);
 
     $conn = ConnectaBD();
     $sql = "INSERT INTO `Usuaris` (`id`, `nom`, `direcció`, `cp`, `email`, `passwd`) VALUES (:id, :nom, :address, :codiPostal, :email, :contrasenya);";

@@ -11,6 +11,9 @@
     $email = $_POST['Correu'];
     $codi_postal = $_POST['CodigoPostal'];
 
+    // Rebre i encriptar contrasenya
+    $contrasenya = password_hash($_POST['Contraseña'], PASSWORD_DEFAULT);
+
 
     // Comprovem si el correu es valid
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
