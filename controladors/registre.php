@@ -32,9 +32,11 @@
         }
         // Tot es valid, inserir usuari a la base de dades
         else{
-            ?> Usuari registrat correctament, faci clic <a href= '../index.php'>aqui</a> per a tornar a la pagina principal <?php
+            ?> <p> Usuari registrat correctament, si d'aqui 3 segons no es redirigit, faci clic <a href= '../index.php'>aqui</a> per a tornar a la pagina principal </p><?php
             require __DIR__."/../models/insertaUsuari.php";
         }
     }
 
 ?>
+
+<meta http-equiv="Refresh" content="3; url='../index.php'" />
