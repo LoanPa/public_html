@@ -42,7 +42,7 @@
         }
 
     }
-    else { // No s'ha pogut registrar
+    else { // No s'ha pogut iniciar sessio
         print "O la contrasenya o el correu introduits son incorrectes :(";
     }
     
