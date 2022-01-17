@@ -11,13 +11,13 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/logreg.js"></script>
-        <script type="text/javascript" src="js/shoppingCart.js"></script>
+        <script type="text/javascript" src="js/ajax.js"></script>
     </head>
 
     <body>
         <header class="HeaderPetit">
             <div id="Account" onclick="login(1)">
-                <a href="#Account" onclick="">
+                <a href="#Account">
                     <span class="material-icons">account_circle</span>
                 </a>
             </div>
@@ -60,21 +60,20 @@
 
             <div id="Cesta">
                 <div id="Opciones" style="grid-row: 1/2">
-                    <div style="grid-row: 1/2">
+                    <div id="opcion0" style="grid-row: 1/2" onclick="seleccio(0)">
                         <p style="grid-column: 1/2">Vinilo</p>
                         <p style="grid-column: 2/3"><?php echo $preu_vinil ?>€</p>
                     </div>
-                    <div style="grid-row: 2/3">
+                    <div id="opcion1" style="grid-row: 2/3" onclick="seleccio(1)">
                         <p style="grid-column: 1/2">CD</p>
                         <p style="grid-column: 2/3"><?php echo $preu_cd ?>€</p>
                     </div>
-                    <div style="grid-row: 3/4">
+                    <div id="opcion2" style="grid-row: 3/4" onclick="seleccio(2)">
                         <p style="grid-column: 1/2">mp3</p>
                         <p style="grid-column: 2/3"><?php echo $preu_mp3 ?>€</p>
                     </div>
                 </div>
-
-                <div id="Comprar" style="grid-row: 2/3">
+                <div id="Comprar" style="grid-row: 2/3" onclick="comprar()">
                     <p>Comprar</p>
                 </div>
             </div>

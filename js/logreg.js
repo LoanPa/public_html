@@ -19,18 +19,18 @@ let reg = `
         <label for="nom">Nom</label><br>
         <input type="text" id="nom" name="Nom" placeholder="Nom..." required><br>
     </div>
-    <di id="correuR">
+    <div id="correuR">
         <label for="correu">Dirección de e-mail</label><br>
         <input type="email" id="correu" name="Correu" placeholder="email@example.com" required><br>
-    </di>
+    </div>
     <div  id="passwordR">
         <label for="contraseña">Contraseña</label><br>
         <input type="password" id="contraseña" name="Contraseña" placeholder="Contraseña..." required>
     </div>
-    <di id="address">
+    <div id="address">
         <label for="direccion">Dirección</label><br>
         <input type="text" id="dirrrecion" name="Address" placeholder="Dirección..." required><br>
-    </di>
+    </div>
     <div id="codiPostal">
         <label for="codiPostal">Código Postal</label><br>
         <input type="text" id="codiPostal" name="CodigoPostal" placeholder="Código..." pattern="[0-9]{5}" required>

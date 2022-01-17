@@ -29,7 +29,7 @@
                 <h4>Las mejores canciones en nuestra web</h4>
             </div>
             <div id="ShoppingBag" onclick="cart()">
-                <a href="#ShoppingBag">
+                <a>
                     <span class="material-icons">shopping_cart</span>
                 </a>
                 <div id="shoppingCartDropDown" class="dropDown">
