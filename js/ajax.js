@@ -54,7 +54,9 @@ function comprar()
 {
     if (opcio_id != -1)
     {
-        var url = "SHA_DE_CANVIAR_.php?album_id=" + album_id + "&opcio_id=" + opcio_id;
+        var url = "controladors/afegirProducteCistella.php?album_id=" + album_id + "&opcio_id=" + opcio_id;
+        alert("El producto se ha añadido a la cesta");
+        $("#shoppingCartDropDown").load(url);
         //Aqui anira on carreguem el php en la cistella i en la bbdd
     }
     else
