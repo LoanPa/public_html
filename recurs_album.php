@@ -34,6 +34,7 @@
                     <p>Preu <b>30€</b></p>
                     <hr>
                     <p>Quantitat <b>3</b></p>
+                    <!--<a href=recurs_cabas.php></a>-->
                 </div>
             </div>
         </header>

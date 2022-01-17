@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head lang="es">
+        <meta charset="UTF-8"/>
+        <title>MUSIC.fm</title>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="css/headerPetit.css"/>
+        <link rel="stylesheet" type="text/css" href="css/logreg.css"/>
+        <link rel="stylesheet" type="text/css" href="css/shoppingcart.css"/>
+        <link rel="stylesheet" type="text/css" href="css/cabas.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/logreg.js"></script>
+        <script type="text/javascript" src="js/ajax.js"></script>
+    </head>
+    <body>
+        <header class="HeaderPetit">
+            <div id="Account" onclick="login(1)">
+                <a href="#Account">
+                    <span class="material-icons">account_circle</span>
+                </a>
+            </div>
+            <div id="IntroName">
+                <a href="recurs_portada.php">
+                    <h1>MUSIC.fm</h1>
+                </a>
+            </div>
+            <div id="ShoppingBag" onclick="cart()">
+                <a href="#ShoppingBag">
+                    <span class="material-icons">shopping_cart</span>
+                </a>
+                <div id="shoppingCartDropDown" class="dropDown">
+                    <p>Preu <b>30€</b></p>
+                    <hr>
+                    <p>Quantitat <b>3</b></p>
+                </div>
+            </div>
+        </header>
+        <section id=Cuerpo>
+            <div id=CabasBackground>
+                
+            </div>
+        </section>
+    </body>
+</html>
