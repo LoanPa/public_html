@@ -1,13 +1,14 @@
 <?php
     $conn = ConnectaBD();
-    $sql="SELECT id FROM Usuaris where email = :mail";
+    $sql="SELECT id, sesion_id FROM Usuaris where email = :mail";
     $stmt = $conn->prepare($sql);
     
     $stmt->bindValue('mail',$mail);
     
     $stmt->execute();
-    $userID = $stmt->fetch();
-    $userID = $userID[0];
+    $result = $stmt->fetch();
+    $userID = $result["id"];
+    $userSID = $result["sesion_id"];
     $conn = null;
 
 ?>
