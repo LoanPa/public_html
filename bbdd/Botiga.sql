@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 21, 2021 at 02:33 PM
+-- Generation Time: Jan 17, 2022 at 06:01 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -118,15 +118,16 @@ CREATE TABLE `Linies_comanda` (
   `album_id` int(1) NOT NULL,
   `quantitat` int(1) NOT NULL,
   `nom` varchar(50) NOT NULL,
-  `preu` decimal(4,2) NOT NULL
+  `preu` decimal(4,2) NOT NULL,
+  `Format` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `Linies_comanda`
 --
 
-INSERT INTO `Linies_comanda` (`id`, `comanda_id`, `album_id`, `quantitat`, `nom`, `preu`) VALUES
-(1, 1, 1, 1, 'album', '11.55');
+INSERT INTO `Linies_comanda` (`id`, `comanda_id`, `album_id`, `quantitat`, `nom`, `preu`, `Format`) VALUES
+(1, 1, 1, 1, 'album', '11.55', '');
 
 -- --------------------------------------------------------
 
@@ -140,17 +141,24 @@ CREATE TABLE `Usuaris` (
   `direcció` varchar(50) NOT NULL,
   `cp` varchar(5) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `passwd` varchar(256) NOT NULL
+  `passwd` varchar(256) NOT NULL,
+  `sesion_id` varchar(50) DEFAULT '""'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `Usuaris`
 --
 
-INSERT INTO `Usuaris` (`id`, `nom`, `direcció`, `cp`, `email`, `passwd`) VALUES
-(1, 'Jaume', 'Casa seva', '08924', 'Jaume@ajuntamentdesantaco.cat', 'contrasenya'),
-(2, 'Joan', 'Casa seva', '08195', 'Jaume@ajuntamentdesantqgat.cat', 'contrasenya'),
-(3, 'Xavier', 'C/ Eduard Maristany', '08912', 'xavierperezbdn@gmail.com', '$2y$10$FnvEbiCg0F762f295WUMJeLU0Boh//3DbxQ920yD9FM9xaw5bvcJa');
+INSERT INTO `Usuaris` (`id`, `nom`, `direcció`, `cp`, `email`, `passwd`, `sesion_id`) VALUES
+(1, 'Jaume', 'Casa seva', '08924', 'Jaume@ajuntamentdesantaco.cat', 'contrasenya', 'd'),
+(2, 'Joan', 'Casa seva', '08195', 'Jaume@ajuntamentdesantqgat.cat', 'contrasenya', ''),
+(3, 'Xavier', 'C/ Eduard Maristany', '08912', 'xavierperezbdn@gmail.com', '$2y$10$FnvEbiCg0F762f295WUMJeLU0Boh//3DbxQ920yD9FM9xaw5bvcJa', ''),
+(4, 'Prova', 'la contra es q', '12345', 'q@q.q', '$2y$10$VuFVpORG5CHqALjYfC6VXuV4rdaNuH7v.dQOzA9.OiHHKgafLQgSy', 'roub9fbtqp4vjo0l1n3a22shfi'),
+(5, 'k', 'khj', '13245', 'a@a.a', '$2y$10$car9M3NrAV0kp8gFwBM7VOF/y2i15uVc1b5vChbLKpfegoBzsINEK', '\"\"'),
+(6, 'fds', 'sfd', '12345', 'xavierperezdbdn@gmail.com', '$2y$10$k/09rQdWqmZ/RkNsSTNDeu8c/x6tjse1MDZqfHXVoxbBUIqzNaqX6', '\"\"'),
+(7, 'ty', 'sdf', '12345', 'qq@dsc.v', '$2y$10$BWKiZzmBtvZKC7HAV5DthenwujaCtRwhnX1hytj6bMKaVsvpGVXNm', '\"\"'),
+(8, '&lt;xz', 'sdomfds', '46553', 'q@dww.dokv', '$2y$10$shQLF1IRpS86N.ZEwAqlj.his2djL3x29Oukiuv.7KD1s4DhSsWu6', '\"\"'),
+(9, 'ads', '65421', '21546', 'rwe@dfsg.fygh', '$2y$10$a8pxOEcAqDPNm.VzWWo57O6etlRYGVy/ka.c1VprsWrlBIzYQA4kW', '\"\"');
 
 --
 -- Indexes for dumped tables
