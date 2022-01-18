@@ -33,7 +33,12 @@
                 <div id="shoppingCartDropDown" class="dropDown">
                     <p>Preu <b><?php /*require __DIR__."/vistes/mostrarPreuCistella.php */echo "n" ;?></b></p>
                     <hr>
+
+                    <p>Quantitat <b>3</b></p>
+                    <!--<a href=recurs_cabas.php></a>-->
+=======
                     <p>Quantitat <b><?php require __DIR__."/vistes/mostrarQuantitatCistella.php";?></b></p>
+
                 </div>
             </div>
         </header>
@@ -60,21 +65,40 @@
 
             <div id="Cesta">
                 <div id="Opciones" style="grid-row: 1/2">
-                    <div id="opcion0" style="grid-row: 1/2" onclick="seleccio(0)">
-                        <p style="grid-column: 1/2">Vinilo</p>
-                        <p style="grid-column: 2/3"><?php echo $preu_vinil ?>€</p>
+                    <div id="opcion0" style="grid-row: 1/2">
+                        <p style="grid-column: 1/2" onclick="seleccio(0, 1)">Vinilo</p>
+                        <p style="grid-column: 2/3" onclick="seleccio(0, 1)"><?php echo $preu_vinil ?>€</p>
+
+                        <div class="Quantitat"style="grid-column: 3/4">
+                            <button style="grid-column: 1/2" onclick="seleccio(0, 1)">+</button>
+                            <p id="cantidad0" style="grid-column: 2/3">0</p>
+                            <button style="grid-column: 3/4" onclick="seleccio(0, -1)">-</button>
+                        </div>
+
                     </div>
-                    <div id="opcion1" style="grid-row: 2/3" onclick="seleccio(1)">
-                        <p style="grid-column: 1/2">CD</p>
-                        <p style="grid-column: 2/3"><?php echo $preu_cd ?>€</p>
+                    <div id="opcion1" style="grid-row: 2/3">
+                        <p style="grid-column: 1/2" onclick="seleccio(1, 1)">CD</p>
+                        <p style="grid-column: 2/3" onclick="seleccio(1, 1)"><?php echo $preu_cd ?>€</p>
+
+                        <div class="Quantitat"style="grid-column: 3/4">
+                            <button style="grid-column: 1/2" onclick="seleccio(1, 1)">+</button>
+                            <p id="cantidad1" style="grid-column: 2/3">0</p>
+                            <button style="grid-column: 3/4" onclick="seleccio(1, -1)">-</button>
+                        </div>
                     </div>
-                    <div id="opcion2" style="grid-row: 3/4" onclick="seleccio(2)">
-                        <p style="grid-column: 1/2">mp3</p>
-                        <p style="grid-column: 2/3"><?php echo $preu_mp3 ?>€</p>
+                    <div id="opcion2" style="grid-row: 3/4">
+                        <p style="grid-column: 1/2" onclick="seleccio(2, 1)">mp3</p>
+                        <p style="grid-column: 2/3" onclick="seleccio(2, 1)"><?php echo $preu_mp3 ?>€</p>
+
+                        <div class="Quantitat"style="grid-column: 3/4">
+                            <button style="grid-column: 1/2" onclick="seleccio(2, 1)">+</button>
+                            <p id="cantidad2" style="grid-column: 2/3">0</p>
+                            <button style="grid-column: 3/4" onclick="seleccio(2, -1)">-</button>
+                        </div>
                     </div>
                 </div>
-                <div id="Comprar" style="grid-row: 2/3" onclick="comprar()">
-                    <p>Comprar</p>
+                <div id="Comprar" style="grid-row: 2/3" onclick="afegir()">
+                    <p>Afegir</p>
                 </div>
             </div>
         </section>
