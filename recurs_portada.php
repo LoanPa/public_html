@@ -23,7 +23,7 @@
                 </a>
             </div>
             <div id="IntroName">
-                <a href="recurs_portada.php">
+                <a href="index.php">
                     <h1>MUSIC.fm</h1>
                 </a>
                 <h4>Las mejores canciones en nuestra web</h4>
@@ -35,7 +35,7 @@
                 <div id="shoppingCartDropDown" class="dropDown">
                     <p>Preu <b><?php /*require __DIR__./"vistes/mostrarPreuCistella.php */echo "n" ;?></b></p>
                     <hr>
-                    <p>Quantitat <b><?php require __DIR__.'/vistes/mostrarQuantitatCistella.php';/*Aixo no funciona no se per que*/?></b></p>
+                    <p>Quantitat <b><?php require __DIR__."/vistes/mostrarQuantitatCistella.php";/*Aixo no funciona no se per que*/?></b></p>
                 </div>
             </div>
         </header>

@@ -10,14 +10,14 @@
     // comparacio de la contrassenya entrada i l'emmagatzemada
     if (password_verify($inputPassword, $password))
     {
-        print "Contrsenya... coooorrrrectaaa!!";
+        print "Contrsenya correcta!!";
 
 
         require __DIR__."/../models/consultaUserID.php";
 
-        echo '<pre>';print_r($userSID);
-        echo '<pre>';print_r($result);
-        echo '<pre>';print_r($userID);
+       // echo '<pre>';print_r($userSID);
+       // echo '<pre>';print_r($result);
+       // echo '<pre>';print_r($userID);
 
         if (!$userSID)
         {
@@ -26,7 +26,7 @@
             session_id($userSID);
             session_start();
 
-            print("\n"."Id: ".$userSID);
+            //print("\n"."Id: ".$userSID);
 
             //guardar ssid
             require __DIR__."/../models/desaSID.php";
@@ -49,4 +49,5 @@
     //la linia d'abaix ens redirigeix immediatament a index
 ?>
 <p> Sessio iniciada correctament, si d'aqui 3 segons no es redirigit, faci clic <a href= '../index.php'>aqui</a> per a tornar a la pagina principal</p>
+<meta http-equiv="Refresh" content="3; url='../index.php'" />
 

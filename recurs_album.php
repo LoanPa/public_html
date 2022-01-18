@@ -22,7 +22,7 @@
                 </a>
             </div>
             <div id="IntroName">
-                <a href="recurs_portada.php">
+                <a href="index.php">
                     <h1>MUSIC.fm</h1>
                 </a>
             </div>
