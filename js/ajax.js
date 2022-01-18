@@ -1,6 +1,8 @@
 // Detall de producte amb AJAX
 var album_id;
-var opcio_id = -1;
+var cantidad0 = 0;
+var cantidad1 = 0;
+var cantidad2 = 0;
 
 function DetallProducte(id)
 {
@@ -57,4 +59,9 @@ function afegir()
         $("#shoppingCartDropDown").load(url);
         alert("Se ha añadido a la cesta");
     }
+}
+
+function VaciarCarrito()
+{
+    document.getElementById("Compra").innerHTML = "";
 }

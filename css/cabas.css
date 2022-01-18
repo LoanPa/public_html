@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 350px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+    transition: color 0.5s;
+}
+
+#Account a:hover, #IntroName a:hover, #ShoppingBag a:hover {
+    color: rgba(255,255,255,1);
+}
+
+#Cuerpo{
+    padding: 2% 5%;
+    height: 100%;
+    justify-content: center;
+    background-color: #F2F2F2;
+}
+
+#CabasBackground {
+    text-align: center;
+    height: 85%;
+    margin: 2% 10%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 25px 40px gray;
+    overflow: auto;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 15%;
+}
+
+header h3{
+    text-align: left;
+    padding-left: 21%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+header h5 {
+    text-align: right;
+    padding-right: 21%;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: red;
+    text-decoration: underline;
+}
+
+#Compra {
+    height: auto;
+}
+
+#Producte {
+    display: grid;
+    grid-row-gap: 5px;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+#Producte p{
+    font-size: 12px;
+}
+
+#Producte h3 {
+    font-size: 15px;
+}
+
+#Producte img {
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Producte img, h1, h3{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#Opciones {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 50% 50%;
+}
+
+#Total {
+    text-align: right;
+    margin: 5%;
+}
+
+#Comprar {
+    height: 10%;
+    width: 20%;
+    max-height: 90px;
+    max-width: 130px;
+    background-color: #0077ed;
+    color: white;
+    transition: background-color 0.2s;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2%;
+}
+
+#Comprar:hover {
+    background-color: #0080ff;
+}
+
+
+
