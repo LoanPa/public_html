@@ -3,7 +3,7 @@ function cart() {
 
     if (shoppingCart.style.display == "none" || shoppingCart.style.display == "")
     {
-        var url = "controladors/NOU_FITXER.php?"
+        var url = "controladors/llistaResumCistella.php?"
         $("#shoppingCartDropDown").load(url);
         shoppingCart.style.display = "block";
     }
