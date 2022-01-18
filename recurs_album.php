@@ -31,13 +31,17 @@
                     <span class="material-icons">shopping_cart</span>
                 </a>
                 <div id="shoppingCartDropDown" class="dropDown">
+
                     <p>Preu <b><?php /*require __DIR__."/vistes/mostrarPreuCistella.php */echo "n" ;?></b></p>
                     <hr>
 
                     <p>Quantitat <b>3</b></p>
                     <!--<a href=recurs_cabas.php></a>-->
-=======
+
                     <p>Quantitat <b><?php require __DIR__."/vistes/mostrarQuantitatCistella.php";?></b></p>
+
+
+                    <p>Ha de resistrar-se per a poder veure la cistella</p>
 
                 </div>
             </div>
@@ -99,6 +103,7 @@
                 </div>
                 <div id="Comprar" style="grid-row: 2/3" onclick="afegir()">
                     <p>Afegir</p>
+                    <p>Comprar</p>
                 </div>
             </div>
         </section>
