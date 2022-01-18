@@ -29,7 +29,7 @@ let reg = `
     </div>
     <div id="address">
         <label for="direccion">Dirección</label><br>
-        <input type="text" id="dirrrecion" name="Address" placeholder="Dirección..." maxlength="30" required><br>
+        <input type="text" id="dirrrecion" name="Address" placeholder="Dirección..." pattern=".{1,30}" required><br>
     </div>
     <div id="codiPostal">
         <label for="codiPostal">Código Postal</label><br>
