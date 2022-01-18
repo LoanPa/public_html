@@ -31,13 +31,6 @@
                     <span class="material-icons">shopping_cart</span>
                 </a>
                 <div id="shoppingCartDropDown" class="dropDown">
-                    <p>Preu <b><?php /*require __DIR__."/vistes/mostrarPreuCistella.php */echo "n" ;?></b></p>
-                    <hr>
-
-                    <p>Quantitat <b>3</b></p>
-                    <!--<a href=recurs_cabas.php></a>-->
-                    <p>Quantitat <b><?php require __DIR__."/vistes/mostrarQuantitatCistella.php";?></b></p>
-
                 </div>
             </div>
         </header>

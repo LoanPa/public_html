@@ -32,7 +32,6 @@
                     <span class="material-icons">shopping_cart</span>
                 </a>
                 <div id="shoppingCartDropDown" class="dropDown">
-                    <p>Ha de resistrar-se per a poder veure la cistella</p>
                 </div>
             </div>
         </header>
