@@ -1,7 +1,5 @@
 <?php
 
-
-
     $producteId = $_GET['album_id'];
     $producteFormat = $_GET['opcio_id'];
 

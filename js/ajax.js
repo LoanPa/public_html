@@ -60,3 +60,8 @@ function afegir()
         alert("Se ha añadido a la cesta");
     }
 }
+
+function VaciarCarrito()
+{
+    document.getElementById("Compra").innerHTML = "";
+}

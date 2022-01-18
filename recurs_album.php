@@ -36,7 +36,6 @@
 
                     <p>Quantitat <b>3</b></p>
                     <!--<a href=recurs_cabas.php></a>-->
-=======
                     <p>Quantitat <b><?php require __DIR__."/vistes/mostrarQuantitatCistella.php";?></b></p>
 
                 </div>
@@ -97,7 +96,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="Comprar" style="grid-row: 2/3" onclick="afegir()">
+                <div id="Afegir" style="grid-row: 2/3" onclick="afegir()">
                     <p>Afegir</p>
                 </div>
             </div>
