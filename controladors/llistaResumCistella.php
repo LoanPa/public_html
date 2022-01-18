@@ -1,5 +1,10 @@
 <?php
     //CONSULTAR PREU BASE DE DADES
+
+    if(!session_id())
+    { 
+        session_start(); 
+    } 
     require_once __DIR__."/../models/connectaBD.php";
     
     $quantitat = 0;
