@@ -1,12 +1,15 @@
 <?php
 
-
-
     $producteId = $_GET['album_id'];
-    $producteFormat = $_GET['opcio_id'];
-    //$producteUnitats = $GET['unitats'];
+    $quantitatFormat0 = $_GET['quantitat_0'];
+    $quantitatFormat1 = $_GET['quantitat_1'];
+    $quantitatFormat2 = $_GET['quantitat_2'];
     
-    if (filter_var($producteId, FILTER_VALIDATE_INT) && filter_var($producteFormat, FILTER_VALIDATE_INT))
+    // Empty() es necessari, en cas contrari 0 -> false
+    if (!empty(filter_var($producteId, FILTER_VALIDATE_INT)) &&
+        !empty(filter_var($quantitatFormat0, FILTER_VALIDATE_INT &&
+        !empty(filter_var($quantitatFormat1, FILTER_VALIDATE_INT &&
+        !empty(filter_var($quantitatFormat2, FILTER_VALIDATE_INT)))
     {
         if (empty($_SESSION['nLinies']))
         {
@@ -16,9 +19,8 @@
         else
         {
             $_SESSION['nLinies']++;
-            $_SESSION['linia'.$_SESSION['nLinies']] = [$producteId, $producteFormat];
+            $_SESSION['linia'.$_SESSION['nLinies']] = array('id' => $producteId, 'format' => $producteFormat);
         }
-    }
- 
+    } 
     
 ?>

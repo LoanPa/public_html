@@ -16,49 +16,45 @@ function Categoria(id)
     $("#Albumes").load(url);
 }
 
-function seleccio(type)
+function seleccio(type, operation)
 {
-    var opcio0 = document.getElementById("opcion0");
-    var opcio1 = document.getElementById("opcion1");
-    var opcio2 = document.getElementById("opcion2");
+    var name1 = "cantidad" + type;
+    var name2 = "opcion" + type;
+    var cantidad = 0;
 
-    if (type == 0)
-        var opcioSeleccio = opcio0;
-    if (type == 1)
-        var opcioSeleccio = opcio1;
-    if (type == 2)
-        var opcioSeleccio = opcio2;
-
-    if ((opcioSeleccio.style.border == "") ||(opcioSeleccio.style.border == "1px solid rgba(0, 0, 0, 0.2)"))
+    if ((type == 0) && (cantidad0 + operation >= 0))
     {
-        opcio0.style.border = "1px solid rgba(0, 0, 0, 0.2)";
-        opcio1.style.border = "1px solid rgba(0, 0, 0, 0.2)";
-        opcio2.style.border = "1px solid rgba(0, 0, 0, 0.2)";
-
-        opcioSeleccio.style.border = "1px solid rgba(0, 0, 0, 0.8)";
+        cantidad = cantidad0 + operation;
+        cantidad0 = cantidad;
     }
-    else
+    if ((type == 1) && (cantidad1 + operation >= 0))
     {
-        opcio0.style.border = "1px solid rgba(0, 0, 0, 0.2)";
-        opcio1.style.border = "1px solid rgba(0, 0, 0, 0.2)";
-        opcio2.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+        cantidad = cantidad1 + operation;
+        cantidad1 = cantidad;
+    }
+    if ((type == 2) && (cantidad2 + operation >= 0))
+    {
+        cantidad = cantidad2 + operation;
+        cantidad2 = cantidad;
     }
 
-    if (opcio_id == type)
-        opcio_id = -1;
+    document.getElementById(name1).innerHTML = cantidad;
+
+    if (cantidad > 0 )
+        document.getElementById(name2).style.border = "1px solid rgba(0, 0, 0, 0.8)";
     else
-        opcio_id = type; 
+        document.getElementById(name2).style.border = "1px solid rgba(0, 0, 0, 0.2)";
 }
 
-function comprar()
+function afegir()
 {
-    if (opcio_id != -1)
-    {
-        var url = "controladors/afegirProducteCistella.php?album_id=" + album_id + "&opcio_id=" + opcio_id;
-        alert("El producto se ha añadido a la cesta");
-        $("#shoppingCartDropDown").load(url);
-        //Aqui anira on carreguem el php en la cistella i en la bbdd
-    }
-    else
+    if (cantidad0 + cantidad1 + cantidad2 == 0)
         alert("No se ha seleccionado ninguna opción");
+    else
+    {
+        var url = "controladors/afegirProducteCistella.php?album_id=" + album_id + "&quantitat_0=" + cantidad0 + "&quantitat_1=" + cantidad1 + "&quantitat_2=" + cantidad2;
+
+        $("#shoppingCartDropDown").load(url);
+        alert("Se ha añadido a la cesta");
+    }
 }
