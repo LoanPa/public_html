@@ -4,22 +4,21 @@
 
     $producteId = $_GET['album_id'];
     $producteFormat = $_GET['opcio_id'];
-
+    //$producteUnitats = $GET['unitats'];
     
     if (filter_var($producteId, FILTER_VALIDATE_INT) && filter_var($producteFormat, FILTER_VALIDATE_INT))
     {
-        if (empty($_SESSION['totalProductes']))
+        if (empty($_SESSION['nLinies']))
         {
-            $_SESSION['producte1'] = [$producteId, $producteFormat];
-            $_SESSION['totalProductes'] = 1;
+            $_SESSION['nLinies'] = 1;
+            $_SESSION['linia1'] = [$producteId, $producteFormat];
         }
         else
         {
-            $_SESSION['totalProductes'] = $nProds;
-            $_SESSION['producte'.$nProds] = [$producteId, $producteFormat];
+            $_SESSION['nLinies']++;
+            $_SESSION['linia'.$_SESSION['nLinies']] = [$producteId, $producteFormat];
         }
     }
-    print_r($_SESSION);
-    
+ 
     
 ?>
