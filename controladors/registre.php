@@ -32,11 +32,10 @@
         }
         // Tot es valid, inserir usuari a la base de dades
         else{
-        echo '<pre>';print_r($newUserID);
+            //echo '<pre>';print_r($newUserID);
 
             require __DIR__."/../models/insertaUsuari.php";
             ?> <p> Usuari registrat correctament, si d'aqui 3 segons no es redirigit, faci clic <a href= '../index.php'>aqui</a> per a tornar a la pagina principal </p><?php
-            echo json_encode(42);
         }
     }
 
