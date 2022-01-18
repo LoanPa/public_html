@@ -37,7 +37,7 @@
             // S'inicia sessio a partir de la id guardada
             session_id($userSID);
             session_start();
-            print "Welcome Bach!!";
+            print "Welcome Back!!";
 
         }
 
@@ -49,5 +49,5 @@
     //la linia d'abaix ens redirigeix immediatament a index
 ?>
 <p> Sessio iniciada correctament, si d'aqui 3 segons no es redirigit, faci clic <a href= '../index.php'>aqui</a> per a tornar a la pagina principal</p>
-<meta http-equiv="Refresh" content="3; url='../index.php'" />
+<meta http-equiv="Refresh" content="10; url='../index.php'" />
 

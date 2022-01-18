@@ -14,7 +14,7 @@ let log = `
     </div>
 </form>`;
 let reg = `
-<form action="" method="post">
+<form action="controladors/registre.php" method="post">
     <div id="Nom">
         <label for="nom">Nom</label><br>
         <input type="text" id="nom" name="Nom" placeholder="Nom..." required><br>
@@ -43,6 +43,7 @@ let reg = `
 let logOpen = false;
 
 function login(type) {
+
     if (type == 1)
     {
         if (!logOpen)
