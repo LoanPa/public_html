@@ -9,7 +9,7 @@
     $nom = htmlentities($_POST['Nom'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
     $address = htmlentities($_POST['Address'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
     $email = $_POST['Correu'];
-    $codi_postal = htmlentities($_POST['CodigoPostal'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    $codi_postal = $_POST['CodigoPostal'];
 
     // Rebre i encriptar contrasenya
     $contrasenya = password_hash($_POST['Contraseña'], PASSWORD_DEFAULT);
@@ -26,6 +26,11 @@
         if ($correu_en_us[0] > 0){
             print "Address already in use: $email, $correu_en_us[0] cops\n";
         }
+        // Sembla ser que a Canada tenen lletres al codi postal... Sorry Canada :(
+            elseif (!filter_var("1".$codi_postal, FILTER_VALIDATE_INT, array("options" => array("min_range"=>0, "max_range"=>199999)))){
+            echo "Invalid postal code: $codi_postal.\nSi el teu codi postal te lletres, substitueix-les per '0' \n";
+        }
+        // Tot es valid, inserir usuari a la base de dades
         else{
             //echo '<pre>';print_r($newUserID);
 
@@ -36,4 +41,4 @@
 
 ?>
 
-<meta http-equiv="Refresh" content="10; url='../index.php'" />
+<meta http-equiv="Refresh" content="3; url='../index.php'" />
