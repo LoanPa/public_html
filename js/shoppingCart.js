@@ -3,11 +3,11 @@ function cart() {
 
     if (shoppingCart.style.display == "none" || shoppingCart.style.display == "")
     {
-        var url = "vistes/mostrarResumCistella.php?"
+        var url = "controladors/NOU_FITXER.php?"
         $("#shoppingCartDropDown").load(url);
         shoppingCart.style.display = "block";
     }
     else
         shoppingCart.style.display = "none";
-
+       
 }

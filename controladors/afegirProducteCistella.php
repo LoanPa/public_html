@@ -1,26 +1,23 @@
 <?php
 
     $producteId = $_GET['album_id'];
-    $quantitatFormat0 = $_GET['quantitat_0'];
-    $quantitatFormat1 = $_GET['quantitat_1'];
-    $quantitatFormat2 = $_GET['quantitat_2'];
+    $producteFormat = $_GET['opcio_id'];
+
     
-    // Empty() es necessari, en cas contrari 0 -> false
-    if (!empty(filter_var($producteId, FILTER_VALIDATE_INT)) &&
-        !empty(filter_var($quantitatFormat0, FILTER_VALIDATE_INT &&
-        !empty(filter_var($quantitatFormat1, FILTER_VALIDATE_INT &&
-        !empty(filter_var($quantitatFormat2, FILTER_VALIDATE_INT)))
+    if (filter_var($producteId, FILTER_VALIDATE_INT) && filter_var($producteFormat, FILTER_VALIDATE_INT))
     {
-        if (empty($_SESSION['nLinies']))
+        if (empty($_SESSION['totalProductes']))
         {
-            $_SESSION['nLinies'] = 1;
-            $_SESSION['linia1'] = [$producteId, $producteFormat];
+            $_SESSION['producte1'] = [$producteId, $producteFormat];
+            $_SESSION['totalProductes'] = 1;
         }
         else
         {
-            $_SESSION['nLinies']++;
-            $_SESSION['linia'.$_SESSION['nLinies']] = array('id' => $producteId, 'format' => $producteFormat);
+            $_SESSION['totalProductes'] = $nProds;
+            $_SESSION['producte'.$nProds] = [$producteId, $producteFormat];
         }
-    } 
+    }
+    print_r($_SESSION);
+    
     
 ?>
