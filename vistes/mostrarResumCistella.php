@@ -1,3 +1,4 @@
+<?php $preu='preuQueVeDelPHP'; $quantitat='QuantitatQueVeDelPHP'?>
 <div id="shoppingCartDropDown" class="dropDown">
     <p>Preu <b><?php echo $preu ;?></b></p>
     <hr>
