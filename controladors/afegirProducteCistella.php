@@ -1,5 +1,10 @@
 <?php
 
+    if(!session_id())
+    { 
+        session_start(); 
+    } 
+
     $producteId = $_GET['album_id'];
     $quantitatFormat0 = $_GET['quantitat_0'];
     $quantitatFormat1 = $_GET['quantitat_1'];
