@@ -33,7 +33,9 @@
                     <span class="material-icons">shopping_cart</span>
                 </a>
                 <div id="shoppingCartDropDown" class="dropDown">
-                    <p>Ha de resistrar-se per a poder veure la cistella</p>
+                    <p>Preu <b><?php /*require __DIR__./"vistes/mostrarPreuCistella.php */echo "n" ;?></b></p>
+                    <hr>
+                    <p>Quantitat <b><?php require __DIR__."/vistes/mostrarQuantitatCistella.php";/*Aixo no funciona no se per que*/?></b></p>
                 </div>
             </div>
         </header>
