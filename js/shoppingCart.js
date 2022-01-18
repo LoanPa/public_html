@@ -3,7 +3,7 @@ function cart() {
 
     if (shoppingCart.style.display == "none" || shoppingCart.style.display == "")
     {
-        var url = "controladors/llistaResumCistella.php?"
+        var url = "vistes/mostrarResumCistella.php?"
         $("#shoppingCartDropDown").load(url);
         shoppingCart.style.display = "block";
     }
