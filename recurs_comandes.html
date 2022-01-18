@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head lang="es">
+        <meta charset="UTF-8"/>
+        <title>MUSIC.fm</title>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="css/headerPetit.css"/>
+        <link rel="stylesheet" type="text/css" href="css/logreg.css"/>
+        <link rel="stylesheet" type="text/css" href="css/shoppingcart.css"/>
+        <link rel="stylesheet" type="text/css" href="css/cabas.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/logreg.js"></script>
+        <script type="text/javascript" src="js/ajax.js"></script>
+    </head>
+    <body>
+        <header class="HeaderPetit">
+            <div id="Account" onclick="login(1)">
+                <a href="#Account">
+                    <span class="material-icons">account_circle</span>
+                </a>
+            </div>
+            <div id="IntroName">
+                <a href="recurs_portada.php">
+                    <h1>MUSIC.fm</h1>
+                </a>
+            </div>
+            <div id="ShoppingBag" onclick="cart()">
+                <a href="#ShoppingBag">
+                    <span class="material-icons">shopping_cart</span>
+                </a>
+                <div id="shoppingCartDropDown" class="dropDown">
+                    <p>Preu <b>30€</b></p>
+                    <hr>
+                    <p>Quantitat <b>3</b></p>
+                </div>
+            </div>
+        </header>
+        <section id=Cuerpo>
+            <div id=CabasBackground>
+                <header>
+                    <h3 style="grid-column: 1/2">Mis pedidos</h3>
+                </header>
+                <section id=Compra>
+                    <div id=Producte>
+                        <img hrc="media/After_hours.jpg" style="grid-column: 1/2">
+                        <h1 style="grid-column: 2/3">Nom de l'album</h1>
+                        <div id="Opciones" style="grid-column: 3/4">
+                            <p style="grid-row: 1/2; grid-column: 1/2">Opció 1</p>
+                            <p style="grid-row: 2/3; grid-column: 1/2">Opcio 2</p>
+                            <p style="grid-row: 3/4; grid-column: 1/2">Opcio 3</p>
+                            <p style="grid-row: 1/2; grid-column: 2/3">Preu 1</p>
+                            <p style="grid-row: 2/3; grid-column: 2/3">Preu 2</p>
+                            <p style="grid-row: 3/4; grid-column: 2/3">Preu 3</p>
+                        </div>
+                        <h3 style="grid-column: 4/5">PREU</h3>
+                    </div>
+
+                    <div id=Producte>
+                        <img hrc="media/After_hours.jpg" style="grid-column: 1/2">
+                        <h1 style="grid-column: 2/3">Nom de l'album</h1>
+                        <div id="Opciones" style="grid-column: 3/4">
+                            <p style="grid-row: 1/2; grid-column: 1/2">Opció 1</p>
+                            <p style="grid-row: 2/3; grid-column: 1/2">Opcio 2</p>
+                            <p style="grid-row: 3/4; grid-column: 1/2">Opcio 3</p>
+                            <p style="grid-row: 1/2; grid-column: 2/3">Preu 1</p>
+                            <p style="grid-row: 2/3; grid-column: 2/3">Preu 2</p>
+                            <p style="grid-row: 3/4; grid-column: 2/3">Preu 3</p>
+                        </div>
+                        <h3 style="grid-column: 4/5">PREU</h3>
+                    </div>
+
+                    <div id=Producte>
+                        <img hrc="media/After_hours.jpg" style="grid-column: 1/2">
+                        <h1 style="grid-column: 2/3">Nom de l'album</h1>
+                        <div id="Opciones" style="grid-column: 3/4">
+                            <p style="grid-row: 1/2; grid-column: 1/2">Opció 1</p>
+                            <p style="grid-row: 2/3; grid-column: 1/2">Opcio 2</p>
+                            <p style="grid-row: 3/4; grid-column: 1/2">Opcio 3</p>
+                            <p style="grid-row: 1/2; grid-column: 2/3">Preu 1</p>
+                            <p style="grid-row: 2/3; grid-column: 2/3">Preu 2</p>
+                            <p style="grid-row: 3/4; grid-column: 2/3">Preu 3</p>
+                        </div>
+                        <h3 style="grid-column: 4/5">PREU</h3>
+                    </div>
+
+                    <div id=Producte>
+                        <img hrc="media/After_hours.jpg" style="grid-column: 1/2">
+                        <h1 style="grid-column: 2/3">Nom de l'album</h1>
+                        <div id="Opciones" style="grid-column: 3/4">
+                            <p style="grid-row: 1/2; grid-column: 1/2">Opció 1</p>
+                            <p style="grid-row: 2/3; grid-column: 1/2">Opcio 2</p>
+                            <p style="grid-row: 3/4; grid-column: 1/2">Opcio 3</p>
+                            <p style="grid-row: 1/2; grid-column: 2/3">Preu 1</p>
+                            <p style="grid-row: 2/3; grid-column: 2/3">Preu 2</p>
+                            <p style="grid-row: 3/4; grid-column: 2/3">Preu 3</p>
+                        </div>
+                        <h3 style="grid-column: 4/5">PREU</h3>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+    </body>
+</html>
