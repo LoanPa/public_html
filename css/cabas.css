@@ -98,8 +98,7 @@ header h5 {
     margin: 5%;
 }
 
-button {
-    text-align: center;
+#Comprar {
     height: 10%;
     width: 20%;
     max-height: 90px;
@@ -109,9 +108,12 @@ button {
     transition: background-color 0.2s;
     border: none;
     border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2%;
 }
 
-button:hover {
+#Comprar:hover {
     background-color: #0080ff;
 }
 
